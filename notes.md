@@ -31,6 +31,8 @@ date(2026, 11, 17)
 Python is dynamically typed
 
 în Python totul este un obiect (!!!!)
+în Python totul este o referință!
+
 
 
 "Duck typing": if it walks like a duck and it quacks like a duck, it must be a duck.
@@ -168,10 +170,11 @@ IndentationError    și el evident
 
 NameError           simbolul respectiv nu este definit
 
-TypeError           1) operațiuni cu data-type-uri incompatibile
+TypeError           1) funcție apelată cu combinație invalidă de argumente
+                    2) operațiuni cu data-type-uri incompatibile
 
 IndexError          index inexistent
-
+KeyError            cheie inexistentă
 
 # Very useful packages:
 
@@ -193,3 +196,5 @@ Shift+Tab   # dez-indentează selecția sau linia curentă
 # varia:
 There are 2 most difficult problems in computing:
 - naming things
+- cache invalidation
+- off-by-one errors
