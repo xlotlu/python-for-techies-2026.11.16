@@ -180,6 +180,17 @@ KeyError            cheie inexistentă
 
 ipython
 
+- pandas: de-facto standard pentru data processing. merită făcute
+  cele 10 minute care sunt 1-2 ore
+  https://pandas.pydata.org/docs/user_guide/10min.html
+
+- flask: microframework web.
+  https://flask.palletsprojects.com/en/stable/quickstart/
+
+- django: framework web monolithic. merită făcute
+  primele 4 părți de tutorial
+  https://docs.djangoproject.com/en/6.1/intro/tutorial01/
+
 
 
 # Working with VSCode:
