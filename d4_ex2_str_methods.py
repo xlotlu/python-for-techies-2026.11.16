@@ -122,10 +122,12 @@ s1.casefold() == s2.casefold()
 s1.lower() != s2.lower()
 
 
-
 s.isdecimal()
 "123".isdecimal()
 
+
+s.removeprefix("starting substring")
+s.removesuffix("ending substring")
 
 
 # D. poate nici nu le mai scriem

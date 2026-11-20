@@ -24,7 +24,6 @@ from datetime import date
 
 # instanțiem un obiect:
 date(2026, 11, 17)
-
 ```
 
 
@@ -37,17 +36,30 @@ Python is dynamically typed
 
 "Duck typing": if it walks like a duck and it quacks like a duck, it must be a duck.
 
+Python comes "with batteries included"
+
+
+iterator: un iterabil care nu este memory-backed.
+          el se suspendă în execuție, și fiecare iterare
+          îi deblochează execuția, el returnând un element nou.
+
+itertools.cycle, itertools.repeat, map, filter, zip: toate sunt iteratori
+
+generator: un caz particular de iterator
+           care poate fi scris:
+           a) cu sintaxa de comprehension,
+           b) drept funcție care conține statement-ul `yield`.
 
 
 # Things to read
 
 (cel puțin o dată în viața de programator)
 
+The Styleguide:
+https://peps.python.org/pep-0008/
+
 String formatting:
 https://docs.python.org/3/library/string.html#format-examples
-
-
-
 
 
 # Data types
@@ -126,6 +138,9 @@ and
 or
 not
 
+in      # testează dacă un element este într-un iterabil
+not in
+
 is      # testează identitate între obiecte. se folosește doar cu True, False și None
 is not
 
@@ -178,19 +193,46 @@ KeyError            cheie inexistentă
 
 # Very useful packages:
 
-ipython
+- `requests`: standardul de-facto în lumea Python pentru lucrat
+  cu http
 
-- pandas: de-facto standard pentru data processing. merită făcute
+- `pandas`: de-facto standard pentru data processing. merită făcute
   cele 10 minute care sunt 1-2 ore
   https://pandas.pydata.org/docs/user_guide/10min.html
 
-- flask: microframework web.
+- `flask`: microframework web.
   https://flask.palletsprojects.com/en/stable/quickstart/
 
-- django: framework web monolithic. merită făcute
+- `django`: framework web monolithic. merită făcute
   primele 4 părți de tutorial
   https://docs.djangoproject.com/en/6.1/intro/tutorial01/
 
+- `fastapi`: framework pentru dezvoltat REST endpoints
+  https://fastapi.tiangolo.com/
+
+- `ipython`: best Python shell, ever
+
+- `rich`: does pretty printing for objects and exceptions.
+  dacă vreți colorizare în shell:
+  
+  ```python
+  from rich import print, pretty
+  pretty.install()
+  ```
+
+## package installation:
+
+în shell de sistem (cmd sau PS):
+
+```shell
+pip install package_name
+```
+
+sau, dacă pip nu este accesibil:
+
+```shell
+python -m pip install package_name
+```
 
 
 # Working with VSCode:
